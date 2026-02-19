@@ -1,0 +1,49 @@
+[build-system]
+requires = ["setuptools>=68", "wheel"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "Adaptive-Agentic-RAG-Langgraph"
+version = "0.1.0"
+description = "Agentic + Adaptive RAG with LangGraph "
+readme = "README.md"
+requires-python = ">=3.10"
+authors = [{ name = "ahmed lamrani" }]
+license = { text = "MIT" }
+
+dependencies = [
+  # Core orchestration + LLM framework
+  "langgraph>=1.0.0",
+  "langchain>=0.2.0",
+
+  # Mistral provider
+  "langchain-mistralai>=0.1.0",
+  "mistralai>=1.0.0",
+
+  # Config + env + CLI quality-of-life
+  "pydantic>=2.6",
+  "pydantic-settings>=2.0",
+  "python-dotenv>=1.0",
+  "rich>=13.7",
+
+  # useful for configs/logging files in YAML/TOML setups
+  "pyyaml>=6.0",
+]
+
+[project.optional-dependencies]
+dev = [
+  "pytest>=8.0",
+  "ruff>=0.5",
+]
+
+[tool.setuptools.packages.find]
+where = ["src"]
+
+[tool.pytest.ini_options]
+testpaths = ["tests"]
+addopts = "-q"
+
+# (longueur de ligne, règles, exclusions, etc.)
+[tool.ruff]
+line-length = 100
+target-version = "py310"

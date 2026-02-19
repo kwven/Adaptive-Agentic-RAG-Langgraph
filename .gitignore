@@ -1,0 +1,9 @@
+__pycache__/
+*.pyc
+.venv/
+.env
+data/vectorstore/
+.pytest_cache/
+*.log
+venv/
+report/

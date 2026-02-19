@@ -1,0 +1,23 @@
+[app]
+env = "dev"
+log_level = "INFO"
+
+[models]
+# We will use Mistral for all LLM calls (router / graders / generate)
+chat_model = "mistral-small-latest"
+
+# embeddings model name (when we build vectorstore)
+embed_model = "mistral-embed"
+
+[paths]
+data_dir = "./data"
+vectorstore_dir = "./data/vectorstore"
+
+[rag]
+top_k = 4
+max_loops = 3
+
+[web]
+# web search provider settings
+provider = "tavily"
+max_results = 5
