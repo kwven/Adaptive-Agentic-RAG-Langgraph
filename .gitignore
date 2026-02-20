@@ -1,9 +1,47 @@
+# Python bytecode/cache
 __pycache__/
-*.pyc
+*.py[cod]
+*$py.class
+
+# Virtual environments
 .venv/
-.env
-data/vectorstore/
-.pytest_cache/
-*.log
 venv/
+env/
+ENV/
+
+# Local environment/secrets
+.env
+.env.*
+!.env.example
+
+# Packaging/build artifacts
+build/
+dist/
+*.egg-info/
+.eggs/
+pip-wheel-metadata/
+
+# Test, coverage, lint, type-check caches
+.pytest_cache/
+.coverage
+.coverage.*
+htmlcov/
+.ruff_cache/
+.mypy_cache/
+.pyre/
+.hypothesis/
+.tox/
+.nox/
+
+# Logs
+*.log
+
+# Editors/OS
+.vscode/
+.idea/
+.DS_Store
+Thumbs.db
+
+# Project-specific generated data
+data/vectorstore/
 report/
